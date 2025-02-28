@@ -1,24 +1,72 @@
-# README
+# Yelp MVP
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Project developed during the [Le Wagon](https://github.com/lewagon) BootCamp Full Stack.
 
-Things you may want to cover:
+## Objective
 
-* Ruby version
+The objective of this challenge is to build a two-model Rails app with a restaurant and anonymous
+reviews.
 
-* System dependencies
+- A visitor can see the list of all restaurants.
 
-* Configuration
+  ```bash
+    GET "restaurants"
+  ```
 
-* Database creation
+- A visitor can add a new restaurant, and be redirected to the `show` view of that new restaurant.
 
-* Database initialization
+  ```bash
+    GET "restaurants/new"
+    POST "restaurants"
+  ```
 
-* How to run the test suite
+- A visitor can see the details of a restaurant, with all the reviews related to the restaurant.
 
-* Services (job queues, cache servers, search engines, etc.)
+  ```bash
+    GET "restaurants/38"
+  ```
 
-* Deployment instructions
+- A visitor can add a new review to a restaurant
 
-* ...
+  ```bash
+    GET "restaurants/38/reviews/new"
+    POST "restaurants/38/reviews"
+  ```
+
+## Setup
+
+To set up the Rails Stupid Coaching application, follow these steps:
+
+Clone the repository:
+
+```sh
+  git clone git@github.com:jotaEmeCortat/rails-yelp-mvp.git
+  cd rails-yelp-mvp
+```
+
+Install dependencies: Make sure you have Ruby and Bundler installed. Then run:
+
+```sh
+  bundle install
+```
+
+Set up the database:
+
+```sh
+  rails db:create db:migrate db:seed
+```
+
+Start the Rails server:
+
+```sh
+  rails server
+```
+
+Access the application: Open your web browser and go to http://localhost:3000.
+
+## Technologies Used
+
+- Ruby on Rails
+- Faker
+- Bootstrap
+- Simple Form
