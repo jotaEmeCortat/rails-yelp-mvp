@@ -8,7 +8,7 @@ puts 'Creating 5 fake restaurants...'
     name:    Faker::Company.name,
     address: "#{Faker::Address.street_address}, #{Faker::Address.city}",
     phone_number: Faker::PhoneNumber.cell_phone,
-    category: "french"
+    category: Restaurant::CATEGORIES.sample
   )
   restaurant.save!
 end
